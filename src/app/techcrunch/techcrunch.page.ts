@@ -3,17 +3,17 @@ import { NewsService } from '../news.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-techcrunch',
+  templateUrl: './techcrunch.page.html',
+  styleUrls: ['./techcrunch.page.scss'],
 })
-export class HomePage implements OnInit {
+export class TechcrunchPage implements OnInit {
   data : any;
   constructor(private newsService: NewsService, private router: Router) { }
 
   ngOnInit() {
     this.newsService
-        .getData('top-headlines?sources=bbc-news')
+        .getData('top-headlines?sources=techcrunch')
         .subscribe(data => {
           console.log(data);
           this.data = data;

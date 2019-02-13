@@ -11,11 +11,10 @@ const routes: Routes = [
     path: 'home',
     loadChildren: './home/home.module#HomePageModule'
   },
-  {
-    path: 'list',
-    loadChildren: './list/list.module#ListPageModule'
-  },
-  { path: 'news-single', loadChildren: './news-single/news-single.module#NewsSinglePageModule' }
+  { path: 'news-single', loadChildren: './news-single/news-single.module#NewsSinglePageModule' },
+  { path: 'techcrunch', loadChildren: './techcrunch/techcrunch.module#TechcrunchPageModule' },
+  { path: 'bitcoin', loadChildren: './bitcoin/bitcoin.module#BitcoinPageModule' },
+  { path: 'topheadlines', loadChildren: './topheadlines/topheadlines.module#TopheadlinesPageModule' }
 ];
 
 @NgModule({

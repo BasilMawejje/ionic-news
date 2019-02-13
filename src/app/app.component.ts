@@ -16,9 +16,19 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'List',
-      url: '/list',
-      icon: 'list'
+      title: 'Techcrunch',
+      url: '/techcrunch',
+      icon: 'laptop'
+    },
+    {
+      title: 'Bitcoin',
+      url: '/bitcoin',
+      icon: 'logo-bitcoin'
+    },
+    {
+      title: 'TopHeadlines',
+      url: '/topheadlines',
+      icon: 'flame'
     }
   ];
 

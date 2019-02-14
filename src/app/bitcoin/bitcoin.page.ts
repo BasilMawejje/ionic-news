@@ -10,10 +10,11 @@ import { Router } from '@angular/router';
 export class BitcoinPage implements OnInit {
   data : any;
   constructor(private newsService: NewsService, private router: Router) { }
+  utc = new Date().toJSON().slice(0,10).replace(/-/g,'-');
 
   ngOnInit() {
     this.newsService
-        .getData('everything?q=bitcoin&from=2019-01-14&sortBy=publishedAt')
+        .getData('everything?q=bitcoin&from=utc&sortBy=publishedAt')
         .subscribe(data => {
           console.log(data);
           this.data = data;

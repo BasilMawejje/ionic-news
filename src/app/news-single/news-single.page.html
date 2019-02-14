@@ -18,7 +18,11 @@
     </ion-card-header>
     <ion-card-content>
       <p>{{ article.description }}</p>
-      <a href={{article.url}} target="_blank">READ MORE</a>
+      <a href={{article.url}} 
+        onclick="window.open(this.href, '_system')
+          return false;">
+          READ MORE
+      </a>
     </ion-card-content>
   </ion-card>
 </ion-content>

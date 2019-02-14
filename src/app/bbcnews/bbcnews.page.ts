@@ -3,11 +3,11 @@ import { NewsService } from '../news.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-bbcnews',
+  templateUrl: './bbcnews.page.html',
+  styleUrls: ['./bbcnews.page.scss'],
 })
-export class HomePage implements OnInit {
+export class BbcnewsPage implements OnInit {
   data : any;
   constructor(private newsService: NewsService, private router: Router) { }
 

@@ -11,7 +11,7 @@ const routes: Routes = [
     path: 'newscategories',
     loadChildren: './newscategories/newscategories.module#NewscategoriesPageModule'
   },
-  { path: 'home', loadChildren: './home/home.module#HomePageModule' },
+  { path: 'bbcnews', loadChildren: './bbcnews/bbcnews.module#BbcnewsPageModule' },
   { path: 'news-single', loadChildren: './news-single/news-single.module#NewsSinglePageModule' },
   { path: 'techcrunch', loadChildren: './techcrunch/techcrunch.module#TechcrunchPageModule' },
   { path: 'bitcoin', loadChildren: './bitcoin/bitcoin.module#BitcoinPageModule' },

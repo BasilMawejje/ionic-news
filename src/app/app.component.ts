@@ -15,9 +15,9 @@ export class AppComponent {
       url: '/newscategories',
       icon: 'apps'
     },{
-      title: 'Home',
-      url: '/home',
-      icon: 'home'
+      title: 'BBC News',
+      url: '/bbcnews',
+      icon: 'clock'
     },
     {
       title: 'Techcrunch',

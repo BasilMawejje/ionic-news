@@ -13,7 +13,7 @@ export class BitcoinPage implements OnInit {
 
   ngOnInit() {
     this.newsService
-        .getData('everything?q=bitcoin&from=2019-01-13&sortBy=publishedAt')
+        .getData('everything?q=bitcoin&from=2019-01-14&sortBy=publishedAt')
         .subscribe(data => {
           console.log(data);
           this.data = data;

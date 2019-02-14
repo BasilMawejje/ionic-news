@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>News Categories</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card class="welcome-card" *ngFor="let p of appPages" [routerDirection]="'root'" [routerLink]="[p.url]">
+      <ion-img [src]="p.image"></ion-img>
+      <ion-card-header>
+          <ion-card-subtitle>{{p.title}}</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+</ion-content>

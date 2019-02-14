@@ -14,7 +14,7 @@ export class NewscategoriesPage {
     },
     {
       title: 'BBC News',
-      url: '/home',
+      url: '/bbcnews',
       image: '../assets/bbc-news.jpg'
     },
     {

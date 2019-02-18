@@ -10,7 +10,7 @@ export class NewscategoriesPage {
     {
       title: 'Top Headlines',
       url: '/topheadlines',
-      image: '../assets/top-headlines.jpg'
+      image: '../assets/top-headlines.gif'
     },
     {
       title: 'BBC News',

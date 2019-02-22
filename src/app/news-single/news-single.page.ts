@@ -37,4 +37,12 @@ export class NewsSinglePage implements OnInit {
     });
   }
 
+  async shareEmail() {
+    this.socialSharing.shareViaEmail(this.article.url, 'Checkout this story', ['']).then(() => {
+      // Success!
+    }).catch(() => {
+      // Error!
+    });
+  }
+
 }

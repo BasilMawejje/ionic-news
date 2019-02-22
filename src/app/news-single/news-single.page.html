@@ -18,15 +18,10 @@
     </ion-card-header>
     <ion-card-content>
       <p>{{ article.description }}</p>
-      <!-- <a href={{article.url}} 
-        onclick="window.open(this.href, '_system', 'location=yes')
-          return false;">
-          READ MORE
-      </a> -->
-      <ion-button expand="full" (click)="openBrowser()">READ MORE</ion-button>
+      <ion-button expand="full" color="light" (click)="openBrowser()">READ MORE</ion-button>
     </ion-card-content>
     <ion-button expand="full" (click)="shareTwitter()">Share on Twitter</ion-button>
-    <ion-button expand="full" (click)="shareEmail()">Share by Email</ion-button>
-    <ion-button expand="full" (click)="shareWhatsApp()">Share with WhatsApp</ion-button>
+    <ion-button expand="full" color="danger" (click)="shareEmail()">Share by Email</ion-button>
+    <ion-button expand="full" color="success" (click)="shareWhatsApp()">Share with WhatsApp</ion-button>
   </ion-card>
 </ion-content>

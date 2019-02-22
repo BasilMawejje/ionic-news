@@ -39,11 +39,9 @@ export class TopheadlinesPage implements OnInit {
 
   async presentToast() {
     const toast = await this.toastController.create({
-      message: 'Fetching new data',
-      showCloseButton: true,
-      position: 'bottom',
-      closeButtonText: 'Done',
-      color: 'dark'
+      message: 'Fetching Top Headlines',
+      color: 'dark',
+      duration: 2000
     });
     toast.present();
   }

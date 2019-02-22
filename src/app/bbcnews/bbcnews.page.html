@@ -10,6 +10,8 @@
 </ion-header>
 
 <ion-content padding>
+  <ion-spinner name="dots" *ngIf="data?.articles == null">
+  </ion-spinner>
   <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
     <ion-refresher-content
       pullingIcon="arrow-dropdown"

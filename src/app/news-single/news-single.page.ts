@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsService } from '../news.service';
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
+import { InAppBrowser, InAppBrowserOptions } from '@ionic-native/in-app-browser/ngx';
 
 @Component({
   selector: 'app-news-single',
@@ -12,11 +13,20 @@ export class NewsSinglePage implements OnInit {
   article : any;
   constructor(
     private newsService :NewsService,
-    private socialSharing: SocialSharing
+    private socialSharing: SocialSharing,
+    private iab: InAppBrowser
     ) { }
 
   ngOnInit() {
     this.article = this.newsService.currentArticle;
+  }
+
+  async openBrowser(){
+    const options : InAppBrowserOptions = {
+      location     : 'yes',
+      hardwareback : 'yes'
+    }
+    this.iab.create(this.article.url, '_system');
   }
 
   async shareTwitter() {

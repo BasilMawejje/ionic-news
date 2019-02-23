@@ -55,4 +55,13 @@ export class NewsSinglePage implements OnInit {
     });
   }
 
+  async share() {
+    // Either URL or Image
+    this.socialSharing.shareViaTwitter(null, null, this.article.url).then(() => {
+      // Success
+    }).catch((e) => {
+      // Error!
+    });
+  }
+
 }

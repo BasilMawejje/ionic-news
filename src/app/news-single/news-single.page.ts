@@ -35,10 +35,24 @@ export class NewsSinglePage implements OnInit {
 
   async openBrowser(){
     const options : InAppBrowserOptions = {
-      location     : 'yes',
-      hardwareback : 'yes'
+      location: 'yes',
+      hidden: 'no',
+      clearcache: 'yes',
+      clearsessioncache: 'yes',
+      zoom: 'yes',
+      hardwareback: 'yes',
+      mediaPlaybackRequiresUserAction: 'no',
+      shouldPauseOnSuspend: 'no',
+      closebuttoncaption: 'Close',
+      disallowoverscroll: 'no',
+      toolbar: 'yes',
+      enableViewportScale: 'no',
+      allowInlineMediaPlayback: 'no',
+      presentationstyle: 'pagesheet',
+      fullscreen: 'yes',
+      footer: 'yes'
     }
-    this.iab.create(this.article.url, '_system');
+    this.iab.create(this.newsService.currentArticle.url, '_system', options);
   }
 
   async shareTwitter() {

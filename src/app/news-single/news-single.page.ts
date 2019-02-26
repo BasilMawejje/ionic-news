@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NewsService } from '../news.service';
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 import { InAppBrowser, InAppBrowserOptions } from '@ionic-native/in-app-browser/ngx';
+import { TextToSpeech } from '@ionic-native/text-to-speech/ngx';
 
 @Component({
   selector: 'app-news-single',
@@ -14,11 +15,21 @@ export class NewsSinglePage implements OnInit {
   constructor(
     private newsService :NewsService,
     private socialSharing: SocialSharing,
+    private tts: TextToSpeech,
     private iab: InAppBrowser
     ) { }
 
   ngOnInit() {
     this.article = this.newsService.currentArticle;
+  }
+
+  async onTextToSpeech(){
+    this.tts.speak({
+      text: this.article.content,
+      rate: 1.50
+    })
+    .then(() => console.log('Success'))
+    .catch((reason: any) => console.log(reason));
   }
 
   async openBrowser(){

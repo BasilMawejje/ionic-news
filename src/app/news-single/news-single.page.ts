@@ -26,6 +26,7 @@ export class NewsSinglePage implements OnInit {
   async onTextToSpeech(){
     this.tts.speak({
       text: this.article.content,
+      locale: 'en-GB',
       rate: 1.50
     })
     .then(() => console.log('Success'))

@@ -12,7 +12,9 @@ export class TopheadlinesPage implements OnInit {
   data : any;
   constructor(private newsService: NewsService, 
               private router: Router,
-              public toastController: ToastController) { }
+              public toastController: ToastController) { 
+                this.doRefresh(0);
+              }
 
   ngOnInit() {
     this.newsService
@@ -30,11 +32,11 @@ export class TopheadlinesPage implements OnInit {
         .subscribe(data => {
           console.log(data);
           this.data = data;
+          if(event != 0){
+            event.target.complete();
+          }
         });
-    setTimeout(() => {
-      event.target.complete();
-    }, 2000);
-    this.presentToast();
+      this.presentToast();
   }
 
   async presentToast() {

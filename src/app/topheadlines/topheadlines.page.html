@@ -10,8 +10,8 @@
 </ion-header>
 
 <ion-content>  
-  <ion-spinner name="dots" *ngIf="data?.articles == null">
-  </ion-spinner>
+  <!-- <ion-spinner name="dots" *ngIf="data?.articles == null">
+  </ion-spinner> -->
   <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
     <ion-refresher-content
       pullingIcon="arrow-dropdown"
@@ -21,13 +21,24 @@
     </ion-refresher-content>
   </ion-refresher>
   <ion-card *ngFor="let article of data?.articles" (click)="onGoToNewsSinglePage(article)">
-    <ion-img [src]="article.urlToImage"  ></ion-img>
+    <ion-img [src]="article.urlToImage"></ion-img>
     <ion-card-header>
       <ion-card-subtitle>{{article.author}}</ion-card-subtitle>
       <ion-card-title>{{ article.title }}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <p>{{ article.description }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngFor='let fake of fakeData' class="fakeNews">
+    <img src="assets/img/placehold.jpg">
+    <ion-card-header class="fakeNewsHeader">
+      <ion-card-subtitle class="fakeNewsSubTitle"></ion-card-subtitle>
+      <ion-card-title class="fakeNewsTitle"></ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="fakeNewsContent">
+      <p class="fakeNewsDescription"></p>
     </ion-card-content>
   </ion-card>
 </ion-content>

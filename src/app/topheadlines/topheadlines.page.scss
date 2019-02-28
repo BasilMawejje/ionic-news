@@ -10,3 +10,40 @@ ion-spinner {
     bottom: 0;
     right: 0;
   }
+
+  .fakeNews{
+    background-color: #e6e6e6;
+  }
+
+  .fakeNewsHeader{
+    background-color: #f2f2f2;
+  }
+
+  .fakeNewsSubTitle{
+    background-color: #bfbfbf;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .fakeNewsTitle{
+    background-color: #bfbfbf;
+    width: 75%;
+    padding: 10px;
+  }
+
+  .fakeNewsContent{
+    background-color: #f2f2f2;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .fakeNewsDescription{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background-color: #bfbfbf;
+  }
+
+  img{
+    height: 250px;
+  }

@@ -10,6 +10,7 @@ import { ToastController } from '@ionic/angular';
 })
 export class TopheadlinesPage implements OnInit {
   data : any;
+  fakeData: Array<any> = new Array(5);
   constructor(private newsService: NewsService, 
               private router: Router,
               public toastController: ToastController) { 

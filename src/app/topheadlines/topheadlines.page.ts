@@ -37,17 +37,17 @@ export class TopheadlinesPage implements OnInit {
             event.target.complete();
           }
         });
-      this.presentToast();
+      // this.presentToast();
   }
 
-  async presentToast() {
-    const toast = await this.toastController.create({
-      message: 'Fetching Top Headlines',
-      color: 'dark',
-      duration: 2000
-    });
-    toast.present();
-  }
+  // async presentToast() {
+  //   const toast = await this.toastController.create({
+  //     message: 'Fetching Top Headlines',
+  //     color: 'dark',
+  //     duration: 2000
+  //   });
+  //   toast.present();
+  // }
 
   onGoToNewsSinglePage(article){
       this.newsService.currentArticle = article;

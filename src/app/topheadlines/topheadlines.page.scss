@@ -11,12 +11,23 @@ ion-spinner {
     right: 0;
   }
 
+  .fakeNews::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+    left: -50%;
+    background: linear-gradient(to bottom, rgba(229, 172, 142, 0), rgba(255,255,255,0.5) 50%, rgba(229, 172, 142, 0));
+    transform: rotateZ(60deg) translate(-5em, 7.5em);
+  }
+
   .fakeNews{
     background-color: #e6e6e6;
   }
 
   .fakeNewsHeader{
-    background-color: #f2f2f2;
+    background-color: #ffffff;
   }
 
   .fakeNewsSubTitle{
@@ -32,7 +43,7 @@ ion-spinner {
   }
 
   .fakeNewsContent{
-    background-color: #f2f2f2;
+    background-color: #ffffff;
     width: 100%;
     padding: 10px;
   }
